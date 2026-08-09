@@ -40,6 +40,10 @@ CREATE TABLE IF NOT EXISTS VENDE (
     Precio DECIMAL(10, 2) NOT NULL,
     PRIMARY KEY (CodFS, CodBeb)
 );
+CREATE TABLE IF NOT EXIST EASTER_EGG (
+    CodEgg VARCHAR(10) PRIMARY KEY,
+    Easter VARCHAR(100) NOT NULL
+)
 """
 # Fin del Esquema DDL
 
@@ -77,6 +81,11 @@ INSERT OR IGNORE INTO VENDE VALUES
     ('FS1', 'B1', 2.50), ('FS1', 'B2', 2.00), ('FS1', 'B3', 2.20),
     ('FS2', 'B1', 2.80), ('FS2', 'B4', 3.00),
     ('FS3', 'B2', 1.80), ('FS3', 'B3', 2.00);
+
+INSERT OR IGNORE INTO EASTER_EGG VALUES
+    ('Egg1', 'Yo solía ser un aventurero como tú. Pero un día me hirieron en la rodilla con una flecha.'),
+    ('Egg2', 'There are no easter eggs up here. Go away.'),
+    ('Egg3', 'The cake is a lie.');
 """
 # Fin de Datos Iniciales
 
